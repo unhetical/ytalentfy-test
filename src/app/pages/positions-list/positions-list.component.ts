@@ -19,10 +19,10 @@ export class PositionsListComponent implements OnInit {
   selectOptions = [
     { name: 'Nombre asc', value: 'name', order: 'asc' },
     { name: 'Nombre desc', value: 'name', order: 'desc' },
-    { name: 'Tecnologia asc', value: 'technology', order: 'asc' },
-    { name: 'Tecnologia desc', value: 'technology', order: 'desc' },
-    { name: 'Candidatos asc', value: 'candidates', order: 'asc' },
-    { name: 'Candidatos desc', value: 'candidates', order: 'desc' },
+    { name: 'Tecnología asc', value: 'technology', order: 'asc' },
+    { name: 'Tecnología desc', value: 'technology', order: 'desc' },
+    { name: 'Número de candidatos asc', value: 'candidates', order: 'asc' },
+    { name: 'Número de candidatos desc', value: 'candidates', order: 'desc' },
   ];
 
   cols = [
