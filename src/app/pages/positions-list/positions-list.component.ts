@@ -28,7 +28,7 @@ export class PositionsListComponent implements OnInit {
   cols = [
     { field: 'id', header: 'id' },
     { field: 'name', header: 'Nombre' },
-    { field: 'technology', header: 'Tecnologia' },
+    { field: 'technology', header: 'Tecnología' },
     { field: 'candidates', header: 'Candidatos' },
   ];
 
