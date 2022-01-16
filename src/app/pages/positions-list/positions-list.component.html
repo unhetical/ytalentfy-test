@@ -114,6 +114,7 @@
       *ngIf="activePositionList"
       #activePositionsTable
       [value]="activePositionList"
+      [columns]="cols"
       [rows]="10"
       [showCurrentPageReport]="true"
       [paginator]="true"
@@ -223,6 +224,7 @@
       *ngIf="inactivePositionList"
       #inactivePositionsTable
       [value]="inactivePositionList"
+      [columns]="cols"
       [rows]="10"
       [showCurrentPageReport]="true"
       [paginator]="true"
