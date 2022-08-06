@@ -1,17 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PositionsListComponent } from './pages/positions-list/positions-list.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/positions-list',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
-  {
-    path: 'positions-list',
-    component: PositionsListComponent,
-  },
+  { path: '', loadChildren: () => import('./modules/main-module/main-module.module').then(m => m.MainModuleModule) },
 ];
 
 @NgModule({

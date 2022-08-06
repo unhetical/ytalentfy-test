@@ -1,4 +1,5 @@
-import { PositionService } from 'src/app/services/position.service';
+import { UserService } from './core/services/user.service';
+import { SessionService } from 'src/app/modules/main-module/services/sessions.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -9,9 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { PositionsListComponent } from './pages/positions-list/positions-list.component';
-import { PositionFormDialogComponent } from './pages/position-form-dialog/position-form-dialog.component';
+import { NavigationComponent } from './shared/components/navigation/navigation.component';
+import { ConfigSidebarComponent } from './shared/components/config-sidebar/config-sidebar.component';
 
 // Prime
 import { DialogService } from 'primeng/dynamicdialog';
@@ -61,11 +61,7 @@ import { TimelineModule } from 'primeng/timeline';
 import { ConfirmationService, FilterService } from 'primeng/api';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PositionsListComponent,
-    PositionFormDialogComponent,
-  ],
+  declarations: [AppComponent, NavigationComponent, ConfigSidebarComponent],
   imports: [
     CommonModule,
     BrowserModule,
@@ -165,9 +161,10 @@ import { ConfirmationService, FilterService } from 'primeng/api';
   ],
   providers: [
     DialogService,
-    PositionService,
+    SessionService,
     FilterService,
     ConfirmationService,
+    UserService
   ],
   bootstrap: [AppComponent],
 })

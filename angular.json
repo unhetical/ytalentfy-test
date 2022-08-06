@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ytalentfy-test": {
+    "tekman-test": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ytalentfy-test",
+            "outputPath": "dist/tekman-test",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -48,6 +48,7 @@
               }
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/nova/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
@@ -65,7 +66,8 @@
               "node_modules/jquery/dist/jquery.slim.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/tinymce/tinymce.js"
+              "node_modules/tinymce/tinymce.js",
+              "node_modules/chart.js/dist/chart.js"
             ]
           },
           "configurations": {
@@ -101,18 +103,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ytalentfy-test:build"
+            "browserTarget": "tekman-test:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ytalentfy-test:build:production"
+              "browserTarget": "tekman-test:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ytalentfy-test:build"
+            "browserTarget": "tekman-test:build"
           }
         },
         "test": {
@@ -147,6 +149,7 @@
               }
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/nova/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
@@ -164,7 +167,8 @@
               "node_modules/jquery/dist/jquery.slim.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/tinymce/tinymce.js"
+              "node_modules/tinymce/tinymce.js",
+              "node_modules/chart.js/dist/chart.js"
             ]
           }
         },
@@ -183,18 +187,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ytalentfy-test:serve"
+            "devServerTarget": "tekman-test:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ytalentfy-test:serve:production"
+              "devServerTarget": "tekman-test:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "ytalentfy-test",
+  "defaultProject": "tekman-test",
   "cli": {
     "defaultCollection": "akita-schematics"
   }
